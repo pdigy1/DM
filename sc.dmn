@@ -1,4 +1,4 @@
-COIN_NAME="StakeCubeCore"
+COIN_NAME="stakecube"
 COIN_PATH="/usr/local/bin/"
 COIN_DAEMON="stakecubed"
 COIN_CLI="stakecube-cli"
