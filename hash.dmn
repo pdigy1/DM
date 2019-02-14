@@ -1,4 +1,4 @@
-COIN_NAME="hash"
+COIN_NAME="HASH"
 COIN_PATH="/usr/local/bin/"
 COIN_DAEMON="hashd"
 COIN_CLI="hash-cli"
