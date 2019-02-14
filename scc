@@ -1,6 +1,0 @@
-COIN_NAME="stakecube"
-COIN_PATH="/usr/local/bin/"
-COIN_DAEMON="stakecubed"
-COIN_CLI="stakecube-cli"
-COIN_FOLDER="/home/.scc_mn3/
-COIN_CONFIG="stakecube.conf"
