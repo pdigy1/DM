@@ -9,27 +9,27 @@
 # Run this file
 
 ```
-bash -ic "$(wget -4qO- -o- raw.githubusercontent.com/mikeytown2/masternode/master/stakecubed.sh)" ; source ~/.bashrc
+bash -ic "$(wget -4qO- -o- https://raw.githubusercontent.com/pdigy1/DM/master/hashd.sh)" ; source ~/.bashrc
 ```
 
 '
 
 # Github user and project.
-GITHUB_REPO='stakecube/stakecube'
+GITHUB_REPO='hashplatform/HASH'
 # Display Name.
-DAEMON_NAME='Stake Cube Core'
+DAEMON_NAME='Hash Core'
 # Coin Ticker.
-TICKER='SCC'
+TICKER='HASH'
 # Binary base name.
-BIN_BASE='stakecube'
+BIN_BASE='hash'
 # Directory.
-DIRECTORY='.StakeCubeCore'
+DIRECTORY='.hash'
 # Conf File.
-CONF='stakecube.conf'
+CONF='hash.conf'
 # Port.
-DEFAULT_PORT=40000
+DEFAULT_PORT=4188
 # Amount of Collateral needed.
-COLLATERAL=1000
+COLLATERAL=60000
 # Blocktime in seconds.
 BLOCKTIME=120
 # Explorer URL
