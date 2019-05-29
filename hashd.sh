@@ -64,9 +64,9 @@ HASH
 # Dropbox blocks and chainstake folders.
 #DROPBOX_BLOCKS_N_CHAINS='4uvpjjoqk5o8bia'
 # Cycle Daemon
-#DAEMON_CYCLE=0
+DAEMON_CYCLE=0
 # Fallback Blockcount
-#BLOCKCOUNT_FALLBACK_VALUE=26000
+BLOCKCOUNT_FALLBACK_VALUE=26000
 # Multiple on single IP.
 MULTI_IP_MODE=1
 # Run Mini Monitor.
