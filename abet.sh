@@ -26,7 +26,7 @@ db84156 on Apr 4
 : '
 # Run this file
 ```
-bash -ic "$(wget -4qO- -o- raw.githubusercontent.com/mikeytown2/masternode/master/nocollateral/altbetd.sh)" ; source ~/.bashrc
+bash -ic "$(wget -4qO- -o- https://raw.githubusercontent.com/pdigy1/DM/master/abet.sh)" ; source ~/.bashrc
 ```
 '
 
