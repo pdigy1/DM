@@ -31,9 +31,9 @@ DEFAULT_PORT=4188
 # Amount of Collateral needed.
 COLLATERAL=60000
 # Blocktime in seconds.
-BLOCKTIME=120
+BLOCKTIME=60
 # Explorer URL
-EXPLORER_URL='https://www.coinexplorer.net/api/v1/SCC/'
+EXPLORER_URL='https://explorer.hashplatform.org'
 EXPLORER_SLEEP=1
 # Cycle Daemon on first start
 DAEMON_CYCLE=1
@@ -41,32 +41,32 @@ DAEMON_CYCLE=1
 ASCII_ART () {
 echo -e "\\e[0m"
 clear 2> /dev/null
-cat << "STAKECUBE"
+cat << "HASH"
    +-----+
   /  $  /|
  +-----+ |   __  _____   __    _     ____  __    _     ___   ____
  |  $  | +  ( (`  | |   / /\  | |_/ | |_  / /`  | | | | |_) | |_
  |  $  |/   _)_)  |_|  /_/--\ |_| \ |_|__ \_\_, \_\_/ |_|_) |_|__
  +-----+
-STAKECUBE
+HASH
 }
 
 # Tip Address
-TIPS='sd8Jov5QZFSc7vrjmNV7Zx6muzpeCpiJLL'
+#TIPS='sd8Jov5QZFSc7vrjmNV7Zx6muzpeCpiJLL'
 # Dropbox Addnodes
-DROPBOX_ADDNODES='o0u8ti5v3l4nbkw'
+#DROPBOX_ADDNODES='o0u8ti5v3l4nbkw'
 # If set to 1 then use addnodes from dropbox.
-USE_DROPBOX_ADDNODES=0
+#USE_DROPBOX_ADDNODES=0
 # Dropbox Bootstrap
-DROPBOX_BOOTSTRAP='tp13jpvluvrdqn4'
+#DROPBOX_BOOTSTRAP='tp13jpvluvrdqn4'
 # If set to 1 then use bootstrap from dropbox.
-USE_DROPBOX_BOOTSTRAP=1
+#USE_DROPBOX_BOOTSTRAP=1
 # Dropbox blocks and chainstake folders.
-DROPBOX_BLOCKS_N_CHAINS='4uvpjjoqk5o8bia'
+#DROPBOX_BLOCKS_N_CHAINS='4uvpjjoqk5o8bia'
 # Cycle Daemon
-DAEMON_CYCLE=0
+#DAEMON_CYCLE=0
 # Fallback Blockcount
-BLOCKCOUNT_FALLBACK_VALUE=26000
+#BLOCKCOUNT_FALLBACK_VALUE=26000
 # Multiple on single IP.
 MULTI_IP_MODE=1
 # Run Mini Monitor.
