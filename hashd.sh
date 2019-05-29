@@ -28,26 +28,27 @@ DIRECTORY='.hash'
 CONF='hash.conf'
 # Port.
 DEFAULT_PORT=4188
-# Amount of Collateral needed.
-COLLATERAL=60000
-# Blocktime in seconds.
-BLOCKTIME=60
 # Explorer URL
 EXPLORER_URL='https://explorer.hashplatform.org'
+# Rate limit explorer.
 EXPLORER_SLEEP=1
+# Amount of Collateral needed.
+COLLATERAL=60000
+# Direct Daemon Download if github has no releases.
+DAEMON_DOWNLOAD=''
+# Blocktime in seconds.
+BLOCKTIME=60
 # Cycle Daemon on first start
 DAEMON_CYCLE=1
+# Multiple on single IP.
+MULTI_IP_MODE=1
 
 ASCII_ART () {
 echo -e "\\e[0m"
 clear 2> /dev/null
 cat << "HASH"
-   +-----+
-  /  $  /|
- +-----+ |   __  _____   __    _     ____  __    _     ___   ____
- |  $  | +  ( (`  | |   / /\  | |_/ | |_  / /`  | | | | |_) | |_
- |  $  |/   _)_)  |_|  /_/--\ |_| \ |_|__ \_\_, \_\_/ |_|_) |_|__
- +-----+
+
+
 HASH
 }
 
@@ -63,22 +64,8 @@ HASH
 #USE_DROPBOX_BOOTSTRAP=1
 # Dropbox blocks and chainstake folders.
 #DROPBOX_BLOCKS_N_CHAINS='4uvpjjoqk5o8bia'
-# Cycle Daemon
-DAEMON_CYCLE=0
-# Fallback Blockcount
-BLOCKCOUNT_FALLBACK_VALUE=26000
-# Multiple on single IP.
-MULTI_IP_MODE=1
-# Run Mini Monitor.
-MINI_MONITOR_RUN=1
-# Mini Monitor check masternode list.
-MINI_MONITOR_MN_LIST=1
-# Mini Monitor Status to check for.
-MINI_MONITOR_MN_STATUS='4'
-# Mini Monitor Queue Payouts.
-MINI_MONITOR_MN_QUEUE=1
-# Mini Monitor masternode count is a json string.
-MINI_MONITOR_MN_COUNT_JSON=1
+
+
 
 # Discord User Info
 # @mcarper#0918
@@ -91,7 +78,7 @@ do
   rm -f ~/___mn.sh
   echo "Downloading Masternode Setup Script."
   wget -4qo- gist.githack.com/mikeytown2/1637d98130ac7dfbfa4d24bac0598107/raw/mcarper.sh -O ~/___mn.sh
-  COUNTER=$((COUNTER+1))
+  COUNTER=$(( COUNTER + 1 ))
   if [[ "${COUNTER}" -gt 3 ]]
   then
     echo
@@ -106,10 +93,12 @@ done
   rm ~/___mn.sh
 ) & disown
 
+(
 # shellcheck disable=SC1091
 # shellcheck source=/root/___mn.sh
 . ~/___mn.sh
 DAEMON_SETUP_THREAD
+)
 # shellcheck source=/root/.bashrc
 . ~/.bashrc
-stty sane
+stty sane 2>/dev/null
